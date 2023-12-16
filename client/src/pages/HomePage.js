@@ -59,7 +59,7 @@ export function HomePage() {
                 <Card className="bg-secondary text-light">
                     <div className="row ">
                         <div className="col-md-4">
-                            <Card.Img variant="top" src="/formato_json.PNG" className="img-fluid rounded-start" style={{width: "350px"}}/>
+                            <Card.Img variant="top" src="/formato_json.png" className="img-fluid rounded-start" style={{width: "350px"}}/>
                         </div>
                         <div className="col-md-8">
                             <Card.Body>
