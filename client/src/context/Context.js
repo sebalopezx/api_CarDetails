@@ -43,19 +43,9 @@ export const Container = ({ children }) => {
 
     const getModelos = async (idMarca) => {
         const res = await getModelosRequest(idMarca)
-        // setMarcas(res.data)
         console.log(res)
         return res
-        // try {
-        //     const res = await getModelosRequest(idMarca);
-        //     if (res && res.data) {
-        //         // En lugar de actualizar todo el estado de marcas, devuelve solo los datos de la marca específica
-        //         return res.data;  
-        //     }
-        // } catch (error) {
-        //     console.error("Error al obtener modelos:", error);
-        //     return null;  // Devuelve null o un valor por defecto en caso de error
-        // }
+
     }
 
     const createNewModelo = async (idmarca, modelo) => {
@@ -124,8 +114,7 @@ export const Container = ({ children }) => {
                 }));
             }
             return res;
-            // const res = await updateModeloRequest(idmarca, idmodelo, updModelo);
-            // return res.data;
+
         } catch (error) {
             console.error("Error al actualizar modelo:", error);
             return null;

@@ -2,31 +2,6 @@ import Vehiculo from "../models/Vehiculo.js";
 import { capitalizarPrimeraLetra, validarIDMarca, validarIDModelo } from "./validar.controllers.js";
 import slugify from 'slugify';
 
-// export const getModelos = async (req, res) => {
-//     try {
-//         // throw new Error ("My error");
-//         const modelos = await Vehiculo.find()
-//         res.send(modelos)
-//     } catch ( error ) {
-//         return res.status(500).json({ message: error.message });
-//     }
-// };
-// const formatoValidoID = (marcaId, modeloId) => {
-//     return mongoose.Types.ObjectId.isValid(marcaId) && mongoose.Types.ObjectId.isValid(modeloId);
-// }
-
-
-// const validarIDMarca = async (marcaId) => {
-//     const marca = await Vehiculo.findById(marcaId);
-//     return marca ? marca : null;
-// }
-
-// const validarIDModelo = (modeloId, marca) => {
-//     const modelo = marca.modelos.find(modelo => modelo._id.toString() === modeloId);
-//     return modelo ? modelo : null;
-// }
-
-
 
 
 export const createModelo = async (req, res) => {
@@ -168,50 +143,3 @@ export const getModelo = async (req, res) => {
 };
 
 
-
-// export const agregarAniosModelo = async (req, res) => {
-//     try {
-//         const marcaId = req.params.marcaid;
-//         const modeloId = req.params.modeloid;
-//         const { anios } = req.body; // Años para agregar
-
-//         // Encontrar la marca y el modelo específico
-//         const marca = await Vehiculo.findById(marcaId);
-//         if (!marca) return res.status(404).json({ message: "Marca no encontrada." });
-
-//         const modelo = marca.modelos.find(m => m._id.toString() === modeloId);
-//         if (!modelo) return res.status(404).json({ message: "Modelo no encontrado." });
-
-//         // Agregar años, evitando duplicados
-//         modelo.anios = Array.from(new Set([...modelo.anios, ...anios]));
-
-//         await marca.save();
-//         res.status(200).json(modelo);
-//     } catch (error) {
-//         return res.status(500).json({ message: error.message });
-//     }
-// };
-
-
-// export const agregarAniosModelo = async (req, res) => {
-//     try {
-//         const marcaId = req.params.marcaid;
-//         const modeloId = req.params.modeloid;
-//         const { anios } = req.body; // Años para agregar
-
-//         // Encontrar la marca y el modelo específico
-//         const marca = await Vehiculo.findById(marcaId);
-//         if (!marca) return res.status(404).json({ message: "Marca no encontrada." });
-
-//         const modelo = marca.modelos.find(m => m._id.toString() === modeloId);
-//         if (!modelo) return res.status(404).json({ message: "Modelo no encontrado." });
-
-//         // Agregar años, evitando duplicados
-//         modelo.anios = Array.from(new Set([...modelo.anios, ...anios]));
-
-//         await marca.save();
-//         res.status(200).json(modelo);
-//     } catch (error) {
-//         return res.status(500).json({ message: error.message });
-//     }
-// };

@@ -2,16 +2,6 @@ import Vehiculo from "../models/Vehiculo.js";
 import { capitalizarPrimeraLetra, validarIDMarca } from "./validar.controllers.js";
 import slugify from 'slugify';
 
-// export const getMarcas = async (req, res) => {
-//     try {
-//         // throw new Error ("My error");
-//         const marcas = await Vehiculo.find()
-//         res.send(marcas)
-//     } catch ( error ) {
-//         return res.status(500).json({ message: error.message });
-//     }
-// };
-
 
 
 export const createMarca = async (req, res) => {
@@ -93,20 +83,3 @@ export const getMarca = async (req, res) => {
     }
 };
 
-// export const getMarca = async (req, res) => {
-//     try {
-//         const marcaId = req.params.id;
-//         console.log("marcaId:", marcaId);
-        
-//         const marca = await Vehiculo.findById(marcaId);
-//         console.log("Resultado de buscar la marca:", marca);
-
-//         if (!marca) {
-//             return res.status(404).json({ message: "Marca no encontrada." });
-//         }
-//         return res.json(marca);
-//     } catch (error) {
-//         console.error(error);
-//         return res.status(500).json({ message: error.message });
-//     }
-// };
