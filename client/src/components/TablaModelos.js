@@ -1,25 +1,24 @@
 import { useMarcas } from "../context/Context";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import toast from "react-hot-toast";
 import { BsFillPencilFill, BsXLg } from "react-icons/bs";
 import { Button } from 'react-bootstrap';
 
-export function TablaMarcas({ marca }) {
+export function TablaModelos({ modelo, marcaid }) {
 
-    const { deleteMarca } = useMarcas()
+    const { deleteModelo } = useMarcas()
     const navigate = useNavigate()
 
-    // toast para eliminar con el id de la marca como param
-    const handleDelete = (id, marca) => {
+    const handleDeleteModelo = (idmarca, idmodelo, modelo) => {
         toast((t) => (
             <div className="text-center">
-                <p>¿Estas seguro que deseas eliminar la marca <strong className="text-dark">{ marca }</strong>?</p>
-                <div >
+                <p>¿Estas seguro que deseas eliminar el modelo <strong className="text-dark">{ modelo }</strong>?</p>
+                <div>
                     <Button variant="danger" size="sm" className="me-3"
                     onClick={() => {
-                        deleteMarca(id);
+                        deleteModelo(idmarca, idmodelo);
                         toast.dismiss(t.id);
-                        toast.success(`Marca ${marca} eliminada`);
+                        toast.success(`Marca ${modelo} eliminada`);
                         }}>
                             Eliminar
                     </Button>
@@ -39,33 +38,28 @@ export function TablaMarcas({ marca }) {
     }
 
     return (
-    
         <tbody>
-            <tr>    
-                <td className="w-25">{marca._id}</td>
-                <td>{marca.marca}</td>
-                <td>{marca.slugmarca}</td>
-                <td>
-                    <Button variant="outline-info" size="sm" className="pt-0" 
-                    onClick={() => navigate(`/marcas/${marca._id}/modelos`)}>
-                        {marca.modelos.length}
-                    </Button>
-                </td>
+                                           
+            <tr>
+                <td className="w-25">{modelo._id}</td>
+                <td>{modelo.modelo}</td>
+                <td>{modelo.slugmodelo}</td>
+                <td style={{ whiteSpace: 'nowrap' }}>{modelo.anios.slice(0, 3).join(', ')} {modelo.anios.length > 3 && '...'}</td>
                 <td>
                     <Button variant="outline-warning" size="sm" className="pt-0"
-                    onClick={() => navigate(`/marcas/${marca._id}/form`)}>
+                    onClick={() => navigate(`/marcas/${marcaid}/modelos/${modelo._id}/form`)}>
                         <BsFillPencilFill />
                     </Button>
                 </td>
                 <td>
                     <Button variant="outline-danger" size="sm" className="pt-0"
-                    onClick={() => handleDelete(marca._id, marca.marca) }>
+                    onClick={() => handleDeleteModelo(marcaid, modelo._id, modelo.modelo) }>
                         <BsXLg />
                     </Button>
                 </td>
             </tr>
-        </tbody>
-        
-    )
-}
 
+        </tbody>
+   
+    );
+}
