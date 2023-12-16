@@ -51,12 +51,12 @@ Es un sistema simple para guardar información de marcas y modelos con su años 
 
 Marcas y Modelos tienen un boton con la cantidad que tienen en su interior, marca(n) con la cantidad de marcas registradas, y modelos(n) con la cantidad de modelos asociados a la marca.
 
-![](https://github.com/sebalopezx/api_CarDetails/blob/master/server/images/inicio.png)
+![](https://github.com/sebalopezx/api_CarDetails/blob/master/server/images/inicio.PNG)
 > Inicio, boton con la cantidad de marcas registradas.
 
 Cada elemento tiene botones para su gestión, para agregar, modificar y eliminar.
 
-![](https://github.com/sebalopezx/api_CarDetails/blob/master/server/images/cantidadmodelo.png)
+![](https://github.com/sebalopezx/api_CarDetails/blob/master/server/images/cantidadmodelo.PNG)
 > Tabla de marcas, con boton de la cantidad de modelos asociados a la marca.
 
 
@@ -68,11 +68,11 @@ Gestionar las Marcas de los vehículos:
 - Eliminar marca existente
 
 
-![](https://github.com/sebalopezx/api_CarDetails/blob/master/server/images/marcas.png)
+![](https://github.com/sebalopezx/api_CarDetails/blob/master/server/images/marcas.PNG)
 > Tabla de marcas.
 
 
-![](https://github.com/sebalopezx/api_CarDetails/blob/master/server/images/marcaform.png)
+![](https://github.com/sebalopezx/api_CarDetails/blob/master/server/images/marcaform.PNG)
 > Formulario de marcas.
 
 
@@ -84,11 +84,11 @@ Gestionar los Modelos y Años de cada marca:
 - Eliminar modelo y años existentes
 
 
-![](https://github.com/sebalopezx/api_CarDetails/blob/master/server/images/modelos.png)
+![](https://github.com/sebalopezx/api_CarDetails/blob/master/server/images/modelos.PNG)
 > Tabla de modelos.
 
 
-![](https://github.com/sebalopezx/api_CarDetails/blob/master/server/images/modeloform.png)
+![](https://github.com/sebalopezx/api_CarDetails/blob/master/server/images/modeloform.PNG)
 > Formulario de modelos.
 
 
