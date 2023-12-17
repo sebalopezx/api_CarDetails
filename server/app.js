@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import urlRoutes from './routes/url.routes.js'
 import fileUpload from "express-fileupload";
 import { dirname, join } from "path";
@@ -7,6 +8,9 @@ import { fileURLToPath } from "url";
 // server
 const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url))
+
+// Habilita CORS
+app.use(cors());
 
 // middlewares
 app.use(express.json())
