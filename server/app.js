@@ -10,7 +10,7 @@ const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // Habilita CORS
-app.use(cors());
+app.use(cors({ origin: '*' }));
 
 // middlewares
 app.use(express.json())
