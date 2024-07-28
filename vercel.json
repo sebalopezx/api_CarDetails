@@ -20,7 +20,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "/build/$1"
+        "dest": "/client/build/$1"
       }
     ]
   }
